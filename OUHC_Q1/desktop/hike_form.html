@@ -1,0 +1,106 @@
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Add/Edit Hike - OU Hiking Club Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>OU Hiking Club Admin</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="hikes_list.html">Hike Events</a></li>
+                <li><a href="social_events_list.html">Social Events</a></li>
+                <li><a href="members_list.html">Membership</a></li>
+                <li><a href="news_list.html">News</a></li>
+                <li><a href="announcements_list.html">Announcements</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="section">
+                <!-- Title will change based on action (Add New / Edit / Review) -->
+                <h2>Add New Club Hike</h2> 
+                <form action="hikes_list.html" method="post"> <!-- Navigates back to list on submit -->
+                    <div class="form-group">
+                        <label for="hike_name">Name of Hike:<span class="required-indicator">*</span></label>
+                        <input type="text" id="hike_name" name="hike_name" placeholder="e.g. Kinder Scout Loop" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hike_type">Type:<span class="required-indicator">*</span></label>
+                        <select id="hike_type" name="hike_type" required>
+                            <option value="">-- Select Type --</option>
+                            <option value="hike">Hike</option>
+                            <option value="walk">Walk</option>
+                            <option value="ramble">Ramble</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="hike_date">Date of Hike:<span class="required-indicator">*</span></label>
+                        <input type="date" id="hike_date" name="hike_date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hike_start_time">Start time:<span class="required-indicator">*</span></label>
+                        <input type="time" id="hike_start_time" name="hike_start_time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hike_duration">Average Duration:</label>
+                        <input type="text" id="hike_duration" name="hike_duration" placeholder="e.g. 4 hours, 2.5 hours">
+                    </div>
+                    <div class="form-group">
+                        <label for="hike_meeting_point">Meeting point:<span class="required-indicator">*</span></label>
+                        <input type="text" id="hike_meeting_point" name="hike_meeting_point" placeholder="e.g. Edale Car Park" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hike_terrain">Terrain Description:</label>
+                        <textarea id="hike_terrain" name="hike_terrain" rows="4" placeholder="e.g. Steep ascents, rocky paths, boggy sections. Suitable for experienced walkers."></textarea>
+                        <p class="description">Vestibulum in nunc felis. Vestibulum eu risus metus, vitae imperdiet sapien? In aliquam posuere bibendum. Phasellus iaculis, sem ut vulputate porta, arcu urna porta dui, non adipiscing justo augue in elit.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="hike_ascent">Ascent in m:</label>
+                        <input type="number" id="hike_ascent" name="hike_ascent" placeholder="e.g. 700">
+                    </div>
+                    <div class="form-group">
+                        <label for="hike_max_group_size">Maximum group size:</label>
+                        <input type="number" id="hike_max_group_size" name="hike_max_group_size" placeholder="e.g. 15">
+                    </div>
+                    <div class="form-group">
+                        <label for="hike_leader_name">Name of leader:<span class="required-indicator">*</span></label>
+                        <input type="text" id="hike_leader_name" name="hike_leader_name" placeholder="e.g. David Miller" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hike_contact_number">Contact number:<span class="required-indicator">*</span></label>
+                        <input type="text" id="hike_contact_number" name="hike_contact_number" placeholder="e.g. 07700900000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hike_status">Status:<span class="required-indicator">*</span></label>
+                        <select id="hike_status" name="hike_status" required>
+                            <option value="Proposed">Proposed</option>
+                            <option value="Approved">Approved</option>
+                            <option value="Rejected">Rejected</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Save Hike</button>
+                        <!-- Conditional buttons for review flow -->
+                        <button type="button" onclick="alert('Simulating Approve Action'); window.location.href='hikes_list.html';">Approve (if Proposed)</button>
+                        <button type="button" onclick="alert('Simulating Reject Action'); window.location.href='hikes_list.html';">Reject (if Proposed)</button>
+                        <a href="hikes_list.html" class="button-link">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <img class="footer-image" src="img/BarWideBlack.jpg" alt="Footer Bar Placeholder" width="1024" height="30">
+        </footer>
+    </div>
+</body>
+</html>
+
+    

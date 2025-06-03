@@ -1,0 +1,200 @@
+/* OUCU_Q1/css/style.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Page background */
+    color: #000;
+}
+
+.container {
+    width: 1024px; /* EMA Desktop width */
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Header Styling (as per NEW screenshot - "OU Cycle Club Admin" header) */
+header.main-header {
+    background-color: #333; /* Dark gray, matching screenshot */
+    color: #fff; /* White text */
+    padding: 1em 20px; /* Padding consistent with container if main uses it */
+    text-align: center; /* Or left, as preferred for "OU Hiking Club Admin" */
+}
+
+header.main-header h1 {
+    margin: 0;
+    font-size: 1.8em; /* Prominent title */
+}
+
+/* Navigation Styling - HORIZONTAL BAR (as per NEW screenshot) */
+nav.main-navigation {
+    background-color: #333; /* Same dark gray as header, or slightly different if desired, e.g., #444 */
+    padding: 0.75em 20px;   /* Padding within the nav bar */
+    text-align: center;     /* Center the nav links, or 'left' to align with container padding */
+    border-bottom: 1px solid #222; /* Optional subtle separator below nav */
+}
+
+nav.main-navigation ul {
+    list-style-type: none; /* No bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+nav.main-navigation ul li {
+    display: inline-block; /* Arrange items horizontally */
+    margin-right: 1.5em;   /* Space between nav items */
+}
+nav.main-navigation ul li:last-child {
+    margin-right: 0;
+}
+
+nav.main-navigation ul li a {
+    color: #fff; /* White text for nav links, matching screenshot */
+    text-decoration: none; /* No underline by default */
+    font-weight: normal;   /* Screenshot shows non-bold nav text */
+    font-size: 0.95em;
+}
+
+/* Link Hover State - Simple underline for wireframe consistency */
+nav.main-navigation ul li a:hover,
+main a:hover,
+.button-link:hover,
+button:hover {
+    text-decoration: underline;
+    /* text-decoration-color: #fff; (For nav links if desired, else browser default) */
+}
+
+/* Main Content Area */
+main {
+    padding: 1.5em 20px; /* Padding for the main content area */
+    min-height: 60vh;
+}
+
+main h2 { /* Section titles like "Quick Links" */
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: 0; /* For first h2 in a section */
+    margin-bottom: 0.75em;
+    border-bottom: 1px solid #ccc; /* Subtle separator for section titles */
+    padding-bottom: 0.3em;
+}
+
+.section {
+    margin-bottom: 2em;
+}
+.section ul { /* Lists within sections */
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+.section ul li {
+    margin-bottom: 0.5em;
+}
+.section ul li a {
+    color: #000; /* Black text for links in main content */
+    text-decoration: underline;
+}
+.section p {
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+table, th, td {
+    border: 1px solid #000;
+}
+th, td {
+    padding: 0.7em 1.2em; /* Good whitespace */
+    text-align: left;
+    vertical-align: top;
+}
+th {
+    background-color: #e0e0e0;
+    font-weight: bold;
+    color: #000; /* Ensure table header text is black */
+}
+
+/* Button Styling */
+button, .button-link {
+    padding: 0.5em 1em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: #e0e0e0;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+/* Form Element Styling */
+form {
+    border: 1px solid #ccc;
+    padding: 1.5em;
+    background-color: #f9f9f9;
+    margin-top: 1em;
+}
+.form-group {
+    margin-bottom: 1em;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+}
+.form-group input[type="text"], /* other input types */
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #000;
+    background-color: #fff;
+    box-sizing: border-box;
+    font-size: 0.95em;
+}
+.form-group textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+.form-group input[type="file"] { padding: 0.3em; }
+.form-group .description { font-size: 0.85em; color: #333; margin-top: 0.2em; }
+
+/* Footer Styling */
+footer {
+    padding: 1em 0; /* Space above/below the footer image */
+    margin-top: 2em;
+    text-align: center;
+}
+.footer-image { /* The image itself is the dark bar */
+    display: block;
+    margin: 0 auto;
+    /* width & height set in HTML. For a bar, height will be small, width 100% of container or fixed. */
+}
+
+/* Content Image Placeholder */
+.content-image-placeholder {
+    display: block;
+    border: 1px dashed #000;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 0.5em;
+}
+.content-image-placeholder + p {
+    margin-top: 0.1em;
+    text-align: left;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+.required-indicator { color: #000; font-weight: bold; margin-left: 2px; }
+.text-center { text-align: center; }

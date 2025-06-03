@@ -1,0 +1,85 @@
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Create/Edit Announcement - OU Hiking Club Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>OU Hiking Club Admin</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="hikes_list.html">Hike Events</a></li>
+                <li><a href="social_events_list.html">Social Events</a></li>
+                <li><a href="members_list.html">Membership</a></li>
+                <li><a href="news_list.html">News</a></li>
+                <li><a href="announcements_list.html">Announcements</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="section">
+                <h2>Create New Announcement</h2> <!-- Or "Edit Announcement" -->
+                <form action="announcements_list.html" method="post">
+                    <div class="form-group">
+                        <label for="announcement_title">Title (max 10 words):<span class="required-indicator">*</span></label>
+                        <input type="text" id="announcement_title" name="announcement_title" placeholder="e.g. Urgent: Upcoming AGM and Elections Notice" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sender_name">Sender's Name:<span class="required-indicator">*</span></label>
+                        <input type="text" id="sender_name" name="sender_name" value="OU Hiking Club Admin Team" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="announcement_body">Email Body (Plain Text):<span class="required-indicator">*</span></label>
+                        <textarea id="announcement_body" name="announcement_body" rows="10" placeholder="Enter the plain text content of your email announcement here." required>Aliquam justo nunc, tempus id tristique at, pretium non massa! Integer aliquet, ligula sit amet aliquam vehicula, arcu urna laoreet augue, ac tincidunt magna felis sed libero. Vestibulum sed dapibus neque. Nulla quis dolor justo.
+
+Curabitur eros leo, tempor quis viverra in, bibendum ac ligula. Aliquam orci sapien, ullamcorper in euismod ut, luctus pharetra lorem. Vestibulum non augue vel nunc rutrum aliquam.
+
+Donec eu diam quis nunc bibendum convallis.
+
+Regards,
+The Hiking Club Team</textarea>
+                        <p class="description">Remember this will be sent as plain text. Emails go only to members who have consented.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="attachment">Select Attachment (single file, optional):</label>
+                        <input type="file" id="attachment" name="attachment">
+                        <p class="description">Current attachment: (none) or filename.pdf</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="send_date">Date to Send:<span class="required-indicator">*</span></label>
+                        <input type="date" id="send_date" name="send_date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="send_time">Time to Send:<span class="required-indicator">*</span></label>
+                        <input type="time" id="send_time" name="send_time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="priority">Priority:<span class="required-indicator">*</span></label>
+                        <select id="priority" name="priority" required>
+                            <option value="Normal">Normal</option>
+                            <option value="High">High</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Schedule/Save Announcement</button>
+                        <a href="announcements_list.html" class="button-link">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <img class="footer-image" src="img/BarWideBlack.jpg" alt="Footer Bar Placeholder" width="1024" height="30">
+        </footer>
+    </div>
+</body>
+</html>
+
+    

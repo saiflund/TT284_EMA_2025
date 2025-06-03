@@ -1,0 +1,205 @@
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Edit Member / Approve Request - OU Hiking Club Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>OU Hiking Club Admin</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="hikes_list.html">Hike Events</a></li>
+                <li><a href="social_events_list.html">Social Events</a></li>
+                <li><a href="members_list.html">Membership</a></li>
+                <li><a href="news_list.html">News</a></li>
+                <li><a href="announcements_list.html">Announcements</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="section">
+                <!-- Title changes based on context -->
+                <h2>Edit Member Details: John Doe</h2> 
+                <!-- Or "Approve New Member: Sarah Jennings" -->
+                <form action="members_list.html" method="post">
+                    <div class="form-group">
+                        <label for="forename">Forename:<span class="required-indicator">*</span></label>
+                        <input type="text" id="forename" name="forename" value="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="surname">Surname:<span class="required-indicator">*</span></label>
+                        <input type="text" id="surname" name="surname" value="Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:<span class="required-indicator">*</span></label>
+                        <input type="date" id="dob" name="dob" value="1985-03-15" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:<span class="required-indicator">*</span></label>
+                        <input type="email" id="email" name="email" value="john.doe@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="text" id="phone" name="phone" value="01234567890">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Home Address:</label>
+                        <textarea id="address" name="address" rows="3">123 Main Street, Anytown, AT1 2BC</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="emergency_contact">Emergency Contact Number:<span class="required-indicator">*</span></label>
+                        <input type="text" id="emergency_contact" name="emergency_contact" value="09876543210" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password_field">Password:</label>
+                        <input type="text" id="password_field" name="password_field" placeholder="Leave blank to keep current, or enter new to change/set" >
+                        <p class="description">Club members update their own passwords via the main club website. Admin can set/reset if necessary.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="membership_option">Membership Option:<span class="required-indicator">*</span></label>
+                        <select id="membership_option" name="membership_option" required>
+                            <option value="standard">Standard</option>
+                            <option value="student">Student</option>
+                            <option value="senior">Senior</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment_method">Preferred Payment Method:</label>
+                        <select id="payment_method" name="payment_method">
+                            <option value="card">Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="cash">Cash</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="auto_renewal">Automatic Renewal:</label>
+                        <select id="auto_renewal" name="auto_renewal">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="email_consent">Consent to receive announcement emails:<span class="required-indicator">*</span></label>
+                        <select id="email_consent" name="email_consent" required>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                     <div class="form-group">
+                        <label for="member_status">Member Status (Admin Use):<span class="required-indicator">*</span></label>
+                        <select id="member_status" name="member_status" required>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                            <option value="pending_approval">Pending Approval</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <!-- Buttons might change based on context -->
+                        <button type="submit">Save Changes</button>
+                        <button type="button" onclick="alert('Simulating Approve Action'); window.location.href='members_list.html';">Approve Request (if Pending)</button>
+                        <button type="button" onclick="alert('Simulating Reject Action'); window.location.href='members_list.html';">Reject Request (if Pending)</button>
+                        <a href="members_list.html" class="button-link">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <img class="footer-image" src="img/BarWideBlack.jpg" alt="Footer Bar Placeholder" width="1024" height="30">
+        </footer>
+    </div>
+</body>
+</html>
+
+    
+
+IGNORE_WHEN_COPYING_START
+Use code with caution. Html
+IGNORE_WHEN_COPYING_END
+
+OUCU_Q1/news_list.html
+
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Manage News Items - OU Hiking Club Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>OU Hiking Club Admin</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="hikes_list.html">Hike Events</a></li>
+                <li><a href="social_events_list.html">Social Events</a></li>
+                <li><a href="members_list.html">Membership</a></li>
+                <li><a href="news_list.html">News</a></li>
+                <li><a href="announcements_list.html">Announcements</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="section">
+                <h2>Manage News Items</h2>
+                <p><a href="news_form.html" class="button-link">Add New News Item</a></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject (Max 3 words)</th>
+                            <th>Posted By (Admin)</th>
+                            <th>First Showing Date</th>
+                            <th>Last Showing Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Upcoming Gear Sale</td>
+                            <td>admin@hikingclub.invalid (Admin User)</td>
+                            <td>01/07/2025</td>
+                            <td>15/07/2025</td>
+                            <td>Currently Showing</td>
+                            <td><a href="news_form.html?id=1&action=edit">Edit</a> | <a href="#">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>Trail Maintenance Day</td>
+                            <td>events_admin@hikingclub.invalid (Jane Admin)</td>
+                            <td>10/08/2025</td>
+                            <td>30/08/2025</td>
+                            <td>Scheduled</td>
+                            <td><a href="news_form.html?id=2&action=edit">Edit</a> | <a href="#">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>Club AGM Report</td>
+                            <td>secretary@hikingclub.invalid (Club Sec)</td>
+                            <td>01/05/2025</td>
+                            <td>31/05/2025</td>
+                            <td>Expired</td>
+                            <td><a href="news_form.html?id=3&action=edit">Edit</a> | <a href="#">Delete</a> | <a href="#">Re-publish</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <footer>
+            <img class="footer-image" src="img/BarWideBlack.jpg" alt="Footer Bar Placeholder" width="1024" height="30">
+        </footer>
+    </div>
+</body>
+</html>
+
+    

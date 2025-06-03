@@ -1,0 +1,85 @@
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Add/Edit Social Event - OU Hiking Club Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>OU Hiking Club Admin</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="hikes_list.html">Hike Events</a></li>
+                <li><a href="social_events_list.html">Social Events</a></li>
+                <li><a href="members_list.html">Membership</a></li>
+                <li><a href="news_list.html">News</a></li>
+                <li><a href="announcements_list.html">Announcements</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="section">
+                <h2>Create New Social Event</h2> <!-- Or "Edit Social Event" -->
+                <form action="social_events_list.html" method="post">
+                    <div class="form-group">
+                        <label for="event_name">Name:<span class="required-indicator">*</span></label>
+                        <input type="text" id="event_name" name="event_name" placeholder="e.g. Club Quiz Night" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event_date">Date:<span class="required-indicator">*</span></label>
+                        <input type="date" id="event_date" name="event_date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event_type">Type:<span class="required-indicator">*</span></label>
+                        <input type="text" id="event_type" name="event_type" placeholder="e.g. Social, Fundraiser, Dinner" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event_start_time">Starting time:<span class="required-indicator">*</span></label>
+                        <input type="time" id="event_start_time" name="event_start_time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event_duration">Duration:</label>
+                        <input type="text" id="event_duration" name="event_duration" placeholder="e.g. 3 hours, All day">
+                    </div>
+                    <div class="form-group">
+                        <label for="event_location">Location:<span class="required-indicator">*</span></label>
+                        <input type="text" id="event_location" name="event_location" placeholder="e.g. Community Hall, High Street" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event_cost">Cost (£, if any):</label>
+                        <input type="number" id="event_cost" name="event_cost" step="0.01" placeholder="e.g. 5.00 or 0 for free">
+                    </div>
+                    <div class="form-group">
+                        <label for="event_max_group_size">Maximum group size (if applicable):</label>
+                        <input type="number" id="event_max_group_size" name="event_max_group_size" placeholder="e.g. 50">
+                    </div>
+                    <div class="form-group">
+                        <label for="event_contact_person">Contact person:<span class="required-indicator">*</span></label>
+                        <input type="text" id="event_contact_person" name="event_contact_person" placeholder="e.g. Sarah Adams" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event_description">Brief Description:</label>
+                        <textarea id="event_description" name="event_description" rows="3" placeholder="Optional short description of the event."></textarea>
+                         <p class="description">Vestibulum sed dapibus neque. Nulla quis dolor justo. Curabitur eros leo, tempor quis viverra in, bibendum ac ligula.</p>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Save Event</button>
+                        <a href="social_events_list.html" class="button-link">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <img class="footer-image" src="img/BarWideBlack.jpg" alt="Footer Bar Placeholder" width="1024" height="30">
+        </footer>
+    </div>
+</body>
+</html>
+
+    
