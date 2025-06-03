@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Add Announcement (Responsive) - OU Hiking Club Admin</title> 
+    <link rel="stylesheet" href="q2b.css"> 
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <h1>OU Hiking Club Admin</h1>
+        </header>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Hike Events</a></li>
+                <li><a href="#">Social Events</a></li>
+                <li><a href="#">Membership</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="q2b.html">Announcements</a></li> <!-- Link to self (example) -->
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Add New Announcement</h2>
+            <form action="https://students.open.ac.uk/mct/tt284/reflect/reflect.php" method="POST" enctype="multipart/form-data">
+                <!-- Hidden Field -->
+                <input type="hidden" name="SessionIdentifier" value="db34-af22-bcda6836-8070">
+
+                <div class="form-group">
+                    <label for="announcement_title">Title (max 10 words):</label>
+                    <input type="text" id="announcement_title" name="announcement_title" maxlength="60" placeholder="e.g. Important Update: AGM Date Changed" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sender_name">Sender's Name:</label>
+                    <input type="text" id="sender_name" name="sender_name" value="OU Hiking Club Admin Team" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="announcement_body">Email Body (Plain Text):</label>
+                    <textarea id="announcement_body" name="announcement_body" rows="10" placeholder="Enter the plain text content of your email announcement here." required></textarea>
+                    <p class="description">This email will be sent as plain text to all consented members.</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="attachment">Select Attachment (single file, optional):</label>
+                    <input type="file" id="attachment" name="attachment">
+                </div>
+
+                <div class="form-group">
+                    <label for="send_date">Date to Send:</label>
+                    <input type="date" id="send_date" name="send_date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="send_time">Time to Send:</label>
+                    <input type="time" id="send_time" name="send_time" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="priority">Priority:</label>
+                    <select id="priority" name="priority" required>
+                        <option value="">-- Please select a priority --</option>
+                        <option value="Normal">Normal</option>
+                        <option value="High">High</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Add Announcement</button>
+                    <button type="reset">Clear Form</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <img class="footer-image" src="img/BarWideBlack.jpg" alt="Footer Bar Placeholder" width="1024" height="30">
+        </footer>
+    </div>
+</body>
+</html>

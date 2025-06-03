@@ -1,0 +1,272 @@
+/* q2b.css */
+
+/* General Styles (Base for Desktop 1024px) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header.main-header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 20px;
+    text-align: center;
+}
+
+header.main-header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+/* Navigation Styling - Horizontal Bar for Desktop */
+nav.main-navigation {
+    background-color: #444;
+    padding: 0.75em 20px;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+nav.main-navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav.main-navigation ul li {
+    display: inline-block;
+    margin-right: 1.5em;
+}
+nav.main-navigation ul li:last-child {
+    margin-right: 0;
+}
+
+nav.main-navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+/* Link Hover State */
+nav.main-navigation ul li a:hover,
+main a:hover,
+.button-link:hover,
+button:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Area */
+main {
+    padding: 1.5em 20px;
+}
+
+main h2 {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0.75em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.3em;
+}
+
+/* Form Specific Styling */
+form {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 1.5em;
+    margin-top: 1em;
+}
+
+.form-group {
+    margin-bottom: 1.2em;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group input[type="file"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.6em;
+    border: 1px solid #999;
+    background-color: #fff;
+    box-sizing: border-box;
+    font-size: 0.95em;
+    border-radius: 3px;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group .description {
+    font-size: 0.85em;
+    color: #555;
+    margin-top: 0.3em;
+    display: block;
+}
+
+/* Button Styling */
+button[type="submit"],
+button[type="reset"],
+.button-link {
+    padding: 0.7em 1.2em;
+    margin-right: 0.7em;
+    margin-top: 0.5em;
+    background-color: #e0e0e0;
+    border: 1px solid #999;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 4px;
+}
+button[type="submit"]:hover,
+button[type="reset"]:hover,
+.button-link:hover {
+    background-color: #ccc;
+}
+
+/* Footer Styling */
+footer {
+    padding: 1em 0;
+    margin-top: 2em;
+    text-align: center;
+}
+
+.footer-image {
+    display: block;
+    margin: 0 auto;
+    /* width and height are set in HTML for desktop */
+}
+
+/* Accessibility Helper */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Mobile styles (for 375px width) */
+@media screen and (max-width: 480px) { /* Allow for landscape phone orientation */
+
+    body {
+        font-size: 15px; /* Slightly smaller base font for mobile */
+    }
+
+    .container {
+        width: 100%; /* full width on mobile */
+        padding: 0; /* remove desktop padding */
+    }
+
+    header.main-header {
+        padding: 0.8em 10px; 
+    }
+    header.main-header h1 {
+        font-size: 1.5em; 
+    }
+
+    nav.main-navigation {
+        padding: 0; 
+        text-align: left; 
+    }
+    nav.main-navigation ul {
+        
+    }
+    nav.main-navigation ul li {
+        display: block;
+        margin-right: 0; 
+        border-bottom: 1px solid #555; 
+    }
+    nav.main-navigation ul li:last-child {
+        border-bottom: none;
+    }
+    nav.main-navigation ul li a {
+        display: block; 
+        padding: 0.8em 15px; 
+        font-size: 1em;
+        text-align: center;
+    }
+
+    main {
+        padding: 1em 15px; 
+    }
+    main h2 {
+        font-size: 1.3em; 
+        margin-bottom: 0.5em;
+    }
+
+    form {
+        padding: 1em; 
+    }
+    .form-group {
+        margin-bottom: 1em;
+    }
+    .form-group label {
+        font-size: 0.95em;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group input[type="time"],
+    .form-group input[type="file"],
+    .form-group select,
+    .form-group textarea {
+        padding: 0.7em; 
+        font-size: 1em; 
+    }
+    .form-group textarea {
+        min-height: 100px;
+    }
+
+
+    button[type="submit"],
+    button[type="reset"],
+    .button-link {
+        display: block; /* stack buttons */
+        width: 100%;    
+        margin-right: 0;
+        margin-bottom: 0.5em; 
+        padding: 0.8em;
+        font-size: 1em;
+    }
+    button[type="submit"]:last-child, 
+    button[type="reset"]:last-child {
+        margin-bottom: 0;
+    }
+
+
+    footer {
+        padding: 0.8em 0;
+        margin-top: 1.5em;
+    }
+    .footer-image {
+        width: 100%;
+        height: auto; 
+    }
+}
