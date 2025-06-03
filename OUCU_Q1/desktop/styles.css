@@ -1,0 +1,227 @@
+/* oucu_q1/css/style.css - wireframe styles */
+
+/* general styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* page background */
+    color: #000; /* default text color */
+    line-height: 1.5;
+}
+
+.container {
+    width: 1024px; /* desktop width */
+    margin: 0 auto; /* center container */
+    box-sizing: border-box;
+}
+
+/* header styling (dark bar with title) */
+header.main-header {
+    background-color: #333; /* dark gray */
+    color: #fff; /* light text */
+    padding: 1em 20px;
+    text-align: center; /* or left, adjust as needed */
+}
+
+header.main-header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+/* navigation - horizontal bar */
+nav.main-navigation {
+    background-color: #444; /* dark gray, slightly lighter or same as header */
+    padding: 0.75em 20px;
+    text-align: center; /* center nav links */
+}
+
+nav.main-navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav.main-navigation ul li {
+    display: inline-block; /* horizontal layout */
+    margin-right: 1.5em;
+}
+nav.main-navigation ul li:last-child {
+    margin-right: 0;
+}
+
+nav.main-navigation ul li a {
+    color: #fff; /* light text */
+    text-decoration: none;
+    font-weight: bold; /* wireframes can have bold nav links */
+    font-size: 0.95em;
+}
+
+nav.main-navigation ul li a:hover {
+    text-decoration: underline;
+}
+
+/* main content area */
+main {
+    padding: 1.5em 20px; /* padding around content */
+    min-height: 60vh; /* ensure some page height */
+}
+
+main h2 { /* section titles */
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0.75em;
+    border-bottom: 1px solid #ccc; /* subtle separator */
+    padding-bottom: 0.3em;
+}
+
+.section { /* content sections */
+    margin-bottom: 2em;
+}
+.section ul { /* lists within sections */
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+.section ul li {
+    margin-bottom: 0.5em;
+}
+.section ul li a {
+    color: #000; /* ensure links in content are visible */
+    text-decoration: underline;
+}
+.section p {
+    margin-top: 0;
+}
+
+/* table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+table, th, td {
+    border: 1px solid #000; /* black borders for wireframe clarity */
+}
+th, td {
+    padding: 0.7em 1.2em; /* whitespace in cells */
+    text-align: left;
+    vertical-align: top;
+}
+th {
+    background-color: #e0e0e0; /* light grey for table headers */
+    font-weight: bold;
+}
+
+/* button styling */
+button, .button-link {
+    padding: 0.6em 1.1em;
+    margin-right: 0.7em;
+    margin-bottom: 0.5em;
+    background-color: #ddd; /* wireframe grey button */
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+button:hover, .button-link:hover {
+    background-color: #ccc;
+    text-decoration: underline;
+}
+
+/* form element styling */
+form {
+    border: 1px solid #ccc;
+    padding: 1.5em;
+    background-color: #f9f9f9; /* light tint for form area */
+    margin-top: 1em;
+}
+.form-group {
+    margin-bottom: 1.2em;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.4em; /* space between label and input */
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group input[type="number"],
+.form-group input[type="file"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.6em;
+    border: 1px solid #999; /* clear border for input fields */
+    background-color: #fff; /* white input background */
+    box-sizing: border-box;
+    font-size: 0.95em;
+    border-radius: 3px; /* slightly rounded for modern feel */
+}
+.form-group textarea {
+    min-height: 100px; /* default textarea height */
+    resize: vertical;
+}
+.form-group .description { /* helper text below inputs */
+    font-size: 0.85em;
+    color: #555;
+    margin-top: 0.3em;
+    display: block;
+}
+
+/* footer styling */
+footer {
+    padding: 1em 0;
+    margin-top: 2em;
+    text-align: center;
+}
+.footer-image { /* for the BarWideBlack.jpg */
+    display: block;
+    margin: 0 auto;
+    /* width & height set in html for placeholders */
+}
+
+/* placeholder image styling */
+.content-image-placeholder {
+    display: block;
+    border: 1px dashed #999; /* dashed border for image spot */
+    background-color: #f0f0f0; /* light fill */
+    text-align: center;
+    padding: 20px 0; /* vertical padding */
+    margin-bottom: 0.5em;
+    color: #777; /* text inside placeholder */
+}
+.content-image-placeholder + p { /* caption for placeholder */
+    margin-top: 0.1em;
+    text-align: left;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+/* utility classes */
+.required-indicator {
+    color: #000;
+    font-weight: bold;
+    margin-left: 2px;
+}
+.text-center {
+    text-align: center;
+}
+.visually-hidden { /* for accessibility if needed */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
