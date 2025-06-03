@@ -1,0 +1,176 @@
+/* q2a.css - Stylesheet for Question 2(a) "Add Announcements" Page */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* White page background */
+    color: #000; /* Black text */
+    line-height: 1.6;
+}
+
+.container {
+    width: 1024px; /* EMA Desktop width */
+    margin: 0 auto; /* Center the container */
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header.main-header {
+    background-color: #333; /* Dark gray */
+    color: #fff; /* White text */
+    padding: 1em 20px;
+    text-align: center; /* Center title within header */
+}
+
+header.main-header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+/* Navigation Styling - Horizontal Bar */
+nav.main-navigation {
+    background-color: #444; /* Slightly lighter dark gray for nav bar */
+    padding: 0.75em 20px;
+    text-align: center; /* Center nav links */
+    border-bottom: 1px solid #222; /* Subtle separator */
+}
+
+nav.main-navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav.main-navigation ul li {
+    display: inline-block; /* Arrange items horizontally */
+    margin-right: 1.5em;
+}
+nav.main-navigation ul li:last-child {
+    margin-right: 0;
+}
+
+nav.main-navigation ul li a {
+    color: #fff; /* White text for nav links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+/* Link Hover State */
+nav.main-navigation ul li a:hover,
+main a:hover, /* Apply to links within main content as well */
+.button-link:hover, /* Class for <a> styled as buttons */
+button:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Area */
+main {
+    padding: 1.5em 20px; /* Padding around the main content block */
+}
+
+main h2 { /* For page/section titles within main */
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0.75em;
+    border-bottom: 1px solid #ccc; /* Separator for titles */
+    padding-bottom: 0.3em;
+}
+
+/* Form Specific Styling */
+form {
+    background-color: #f9f9f9; /* Light background for the form area */
+    border: 1px solid #ccc; /* Border around the form */
+    padding: 1.5em;
+    margin-top: 1em; /* Space above the form */
+}
+
+.form-group {
+    margin-bottom: 1.2em; /* Space between form groups */
+}
+
+.form-group label {
+    display: block; /* Labels on their own line */
+    font-weight: bold;
+    margin-bottom: 0.3em; /* Space between label and input */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"], /* Though not used in this specific form */
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group input[type="file"],
+.form-group select,
+.form-group textarea {
+    width: 100%; /* Make form elements take full available width */
+    padding: 0.6em; /* Padding inside form elements */
+    border: 1px solid #999; /* Border for form elements */
+    background-color: #fff; /* White background for input fields */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    font-size: 0.95em;
+    border-radius: 3px; /* Slightly rounded corners */
+}
+
+.form-group textarea {
+    min-height: 120px; /* Good default height for a message body */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.form-group .description { /* For small helper text below inputs */
+    font-size: 0.85em;
+    color: #555; /* Dark gray for helper text */
+    margin-top: 0.3em;
+    display: block;
+}
+
+/* Button Styling */
+button[type="submit"],
+button[type="reset"], /* Style reset button if used */
+.button-link { /* For <a> styled as button */
+    padding: 0.7em 1.2em;
+    margin-right: 0.7em;
+    margin-top: 0.5em; /* Space above buttons if they wrap */
+    background-color: #e0e0e0; /* Light grey button */
+    border: 1px solid #999; /* Slightly softer border for buttons */
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 4px;
+}
+button[type="submit"]:hover,
+button[type="reset"]:hover,
+.button-link:hover {
+    background-color: #ccc; /* Darker grey on hover */
+}
+
+
+/* Footer Styling */
+footer {
+    padding: 1em 0; /* Space above/below the footer image */
+    margin-top: 2em; /* Space above footer */
+    text-align: center;
+}
+
+.footer-image {
+    display: block;
+    margin: 0 auto; /* Center if not full width */
+    /* width & height set in HTML */
+}
+
+/* Accessibility Helper */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
